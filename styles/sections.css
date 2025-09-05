@@ -2,6 +2,22 @@
   img {
     height: 100%; /*altura*/
     object-fit: cover; /* cover faz a cobertura total da img */
+  }
+}
+
+.card {
     border-radius: 4px; /*arredodamento da img nas pontas */
+    overflow: hidden; /* esconda tudo o que passar da caixa*/
+    position: relative;
+  &::before {
+    content: "";
+    position: absolute; 
+    inset: 0;
+    top: 50%;
+    background: linear-gradient(
+      180deg,
+      transparent 0%, 
+      #020617 100%
+    );
   }
 }
